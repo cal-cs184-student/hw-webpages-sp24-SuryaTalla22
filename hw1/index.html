@@ -1,7 +1,9 @@
 <html>
 	<head>
+		<title>CS184 Assignment 1 - Surya Tallavarjula</title>
 	</head>
 	<body>
-		Homework 1 index.html here
+		<h1>Overview</h1>
+		<p>In this Assignment, we cover rasterizing images. In order to do this, we break up the image into triangles, and feed groups of 3 points into the rasterization pipeline. Depending on the desired image, there may or may not be some texture that needs to be mapped to the screen space. In any case, raw point sampling generally leads to jagged edges and aliasing. There are a number of techniques we can use to combat this. Firstly, we can supersample by taking multiple samples within the region of one pixel, and then taking the average of the values. This becomes very effective the more samples you have per pixel, but supersampling can be very costly. For texture mapping, there are much more efficient ways to implement anti-aliasing. We can implement bilinear interpolation to sample at pixel locations in the texture space. Furthermore, we can utilize a mip-map with decreasing resolutions of the texture: when the step size in texture space is relatively small for a step in the rendering space, we opt for a higher resolution image. When step size in texture space is relatively large, we opt for a lower resolution image to combat potential aliasing. This is a low-cost, effective way to minimize aliasing in texture mapping. Ultimately, we will explore in this report the fundamentals of image rasterization and texture mapping, as well as techniques to reduce aliasing while maintaining efficiency.</p>
 	</body>
 </html>
