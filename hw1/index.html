@@ -10,6 +10,16 @@
 		<img src="triangle_diagram184-1.png" alt="A diagram of the possible normal vectors of a triangle denoted by point A, B, and C" width="800" height="500">
 		<p>In this diagram, we show that there are two possibilities: all normal vectors could be pointing outwards or inwards. In the outwards case we want all dot products to be negative (or zero), and for the inwards case we want all dot products to be positive (or zero). When these conditions are met, we know the point is inside or on the boundary of a triangle, and we know to fill it in. Now, we can iterative through all points within the bounding box of the triangle, evaluating wether the pixels are in the triangle using this method. It is worth noting that we actually sample at the +0.5 position, meaning point (3, 4) actually corresponds visually to (3.5, 4.5). Essentially, my algorithm is as follows: first, in the rasterize triangle function, I find the minimum and the maximum bounds for the x and y coordinates. Since there are three points, I accomplish this using a chain of min or max such as min(min(A, B), min(B, C)). Then, I set these parameters as the bounds for the for loop. For each point within this 'box', I add an offset of 0.5 to each coordinate and test whether it is in the triangle, outsourcing this process to a helper function which does the dot product procedure as described and returns true if all points are <= 0 or >= 0 and false otherwise. If the point is in the triangle, I call fill pixel on the x and y coordinates with the color provided. Here are the results of the algorithm on a sample svg file: </p>
 		<img src="Screenshot 2024-02-09 034133.png" alt="results of the triangle drawing algorithm" width="800" height="500">
+		<h2>Task 2: Antialiasing By Supersampling</h2>
+		<p></p>
+		<h2>Task 3: Transforms</h2>
+		<p></p>
+		<h2>Task 4: Barycentric Coordinates</h2>
+		<p></p>
+		<h2>Task 5: Pixel Sampling For Texture Mapping</h2>
+		<p></p>
+		<h2>Task 6: Level Sampling With Mip-Maps For Texture Mapping</h2>
+		<p></p>
 	
 	</body>
 </html>
