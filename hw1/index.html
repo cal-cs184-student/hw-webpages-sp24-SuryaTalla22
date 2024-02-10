@@ -24,7 +24,9 @@
 		<p>The first robot image is simply a rendering of the sample robot.svg file provided to us. To make the robot appear waving in the second picture, I implemented a 60 degree rotation of the left arm and a 90 degree rotation of the right arm. Thinking in terms of the rotated frame of refernce, I also had to implement an additional translation to both arms to place them in the correct position relative to the body.  </p>
 		<h2>Task 4: Barycentric Coordinates</h2>
 		<p>Barycentric Coordinates are an intuitive system of coordinates for triangles! They have many uses which stem from the fact that a point in space is represented as a linear combination of the other 3 points. This means that, for instance, if any transformation of the triangle were to occur such as a scaling, translation, or rotation, barycentric coordinates would preserve the relative positioning. Let's get in to what they are: <br>Say we have some triangle represented by points ABC. Then, we can represent any coordinates within them as some linear combination of A, B and C: Pxy = &#913;A + &#946;B + &#947;C, for &#913; + &#946; + &#947; = 1. Now, we can set up independent equations with the x and y coordinates, as well as the normalization equation (&#913; + &#946; + &#947; = 1), giving us three equations and three unknowns, which can be solved explicitly. Now that we know how to calculate barycentric coordinates, we can do interesting things with them. One example that illustrates barycentric coordinates is a triangle drawing with endpoints distinctly red, green, and blue, allowing us to visualize the barycentric parameter values with color: </p>
-		
+		<img src="images/Barycentric_triangle_interpolation.png" alt="Barycentric Example">
+		<p>As you can see, the endpoint are fully red, blue, and green, and the points within the triangle are a linear combination of those colors through barycentric interpolation. Another cool example of this effect is the color wheel: </p>
+		<img src="" alt="">
 		<h2>Task 5: Pixel Sampling For Texture Mapping</h2>
 		<p></p>
 		<h2>Task 6: Level Sampling With Mip-Maps For Texture Mapping</h2>
