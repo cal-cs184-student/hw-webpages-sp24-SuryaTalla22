@@ -35,7 +35,7 @@
 		<img src="images/Screenshot 2024-02-09 222119.png" alt="texture mapping" width="800" height="430">
 		<p>As you can see, billinear interpolation clearly beats out nearest pixel interpolation for texture mapping at a sampling rate of 1. The lattitude line aliases on the nearest pixel mode, but appears relatively continuous for billinear interpolation. Furthermore, comparing supersampled versions, we see that both are pretty good. However, billinear interpolation has a slight edge in that the longitudal lines appear more continuous in their curves, while the nearest pixel rendering is more jagged.</p>
 		<h2>Task 6: Level Sampling With Mip-Maps For Texture Mapping</h2>
-		<p></p>
+		<p>It is apparent that supersampling works very well, but it is costly: to supersample at a rate of 16 will take 16 times as much time, or in other words the order of growth is linear in the scale of the sample rate. Can we do better? The answer is yes, and one time-efficient anti-aliasing method uses mip-maps. The theory is as follows: we produce lower and lower resolution renderings (downsizing width and height by a factor of 1/2 each time), storing all of these texture renderings in an array. Then, if we can compute the 'signal frequency', we can choose the appropriate level mapping to preserve resolution in some places where the signal frequency is high, and blur resolution in places where the signal frequency is low. The frequency in this case is a measure of how much the uv coordinate change for a small increment of x: a large change in u and v corresponds to a lower frequency and vice versa. This effect is visualized in the following diagram: </p>
 	
 	</body>
 </html>
